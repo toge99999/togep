@@ -1,9 +1,11 @@
 /* body */
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-/*改行*/
-.pc-br{display:block;}
+/*非表示*/
 .sp-br{display:none;}
+.sp_link{display: none;}
+.sActual_img_sp{display: none;}
+.pSkilbox_sp{display: none;}
 
 body{
     /* カーソル*/
@@ -16,38 +18,57 @@ body{
    letter-spacing: 0.2em;
    font-weight: 900;
 
-   /* 背景初期値    */
-   background-color: #fff;
-}  
+   /* 背景色初期値*/
+      background-color: #0d1117;
+  }
 
 *{
     margin: 0px;
    padding: 0px;
 }
 
+.item_link,.nav_content,.cTitle,.cHoby,.sSkil,.sActual,.slast{
+    width: 1920px;
+    height: auto;
+}
+
 h1{
-    font-size:40px;
+    font-size: 100px;
     font-weight: 900;
 	text-align:center;
 	line-height:0.95em;
 	text-shadow: 0 0 0.2em #fff;
 }
-h3{
+
+h3,p{
+    font-size: 40px;
     color: #fff;
     font-weight: 900;
 }
+
 a{
     color: #183c7f;
     font-weight: 900;
     text-shadow: 0 0 0 #000;
 }
+
+p{
+    color: #151f33;
+}
+
 /* フォント白 */
 .wfont{
     color:#cd69ff;
     text-shadow: 0 0 0 #000;
 }
 
-/* ヘッダーデザイン */
+.portfolio_toge{
+    width: 1920px;
+    height: auto;
+}
+
+
+/* ヘッダーデザイン-------------------------*/
 header{
     background-color: #000;
 }
@@ -56,19 +77,20 @@ a{
     display: contents;
 }
 
- /*レスポンシブ対応用背景*/
+ /*背景：スマートフォン用*/
  .helper_cat{
     display:none;/*非表示*/
 }
 
-/* タイトル部スタイル   */
+/* タイトル部スタイル-------------------------*/
 .cTitle{
     position: absolute;
 }
+
 /*タイトル背景*/
 .video_title{
-    width: 100vw;
-    height: 620px;
+    width: 1920px;
+    height: 1000px;
     position: relative;
     object-fit: cover;
 }
@@ -76,16 +98,19 @@ a{
  .nami{
     width: 100%;
     position: absolute;
-    bottom: -50px;
+    bottom: -120px;
     z-index: 500;
  }
 /*タイトルロゴ*/
 .img_title{
+    left: 38%;
+    height: 50%;
+    width: 50%;
     position: absolute;
-    left: 45%;
     bottom: 330px;
     animation: img_title 5s ease 1s normal backwards;
 }
+
 /*タイトルネコ*/
 .img_cat{
     position: absolute;
@@ -95,7 +120,7 @@ a{
     background-image: url(../img/cat2.PNG);
     animation: img_cat 10s ease 1s normal backwards;
     z-index: 500;
-    bottom: -9px;
+    bottom: 100px;
 }
 
 @keyframes img_cat{
@@ -123,25 +148,29 @@ a{
   li {
     list-style: none;
   }
+
   /*タイトルリンク*/
 .item_links{
     width: 100%;
 }
+
 .item_link {
     top: 0;
     width: 100%;
-    height: 25px;
-    padding-top: 25px;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: flex;
     z-index: 10000;
     position: fixed;
-    background-color: #000;   
+    background-color: #0d1117;   
   }
 
 .li_link{
     margin-top: -20px;
     margin-right: 50px;
     padding-left: 15px;
+    font-size: 70px;
     display: inline-block;
     font-weight:bold;
     transition:.5s;
@@ -157,26 +186,25 @@ a{
     padding-right: 15px;
 }
 
-/*プロフィール*/
+/*プロフィールスタイル-------------------------*/
 .prof_img{
-    height: 250px;
-    width: 250px;
-    margin: 40px 0 10px 0;
+    height: 500px;
+    width: 500px;
+    margin: 100px 0 30px 0;
 }
 
 .profCat h3{
-    margin: 10px 0 10px 0;
+    margin: 40px 0 -230px 0;
 }
-/*1⃣趣味スタイル  */
+
+/*趣味*/
 .cHoby{
     position: absolute;
-   /* background-color: red;*/
-    top: 770px;
+    top: 1240px;
     height: 600px;
     width: 100%
-    /*width: 110%;*/
-    /*left: -10px;*/
 }
+
 .nHoby{
     text-align: center;
 }
@@ -196,13 +224,14 @@ a{
 
 /*趣味の画像*/
 .cHoby_img{
-    width: 200px;
-    height: 200px;
+    width: 450px;
+    height: 450px;
     margin: 0 50px 0 50px;
 }
+
 .aHoby_img{
-    width: 200px;
-    height: 200px;
+    width: 450px;
+    height: 450px;
     margin: 0 50px 0 50px;
     animation: aHoby_img 0.5s ease 1s normal backwards;
 }
@@ -225,107 +254,159 @@ a{
     margin-left: 35px;
     
 }
+
 .marginset{
-    margin-top: 100px;
+    margin-top: 280px;
 }
 
 .big_cat{
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 450px;
 }
 
-/*スキル１スタイル*/
-.sSkil0{
-    top: 1900px;
+/*スキルスタイル--------------------------*/
+.sSkil{
+    top: 3150px;
     position: absolute;
+    width: 100%;
     height: 300px;
-    width: 100%;
-    left: -10px;
+    z-index: 500;
+
 }
+
 .sSkil0Box{
-    height: 230px;
-    width: 100%;
     display: flex;
     justify-content: center;
+    height: 230px;
+    width: 100%;
+    margin-top: 100px;
     font-weight: 900;
 }
+
 .sSkil0CatB{
-    /*background-color: #293d66;*/
+    text-align: center;
     height: 250px;
     width: 250px;
-    margin: 45px 25px 0 25px;
-    text-align: center;
+    margin: 45px 160px 0 160px;
     border-radius: 50%;
+    color: #fff;
 }
-.sSkil0CatB2{
-    color: #e6e6e6;
-    margin: 90px 10px 5px 10px;
+
+.sSkil0CatB h3{
+    margin-top: -300px;
+    font-size: 40px;
 }
-.sSkil0CatB2 h3{
-    margin-top: -175px;
-}
+
 .sSkil0Cir_img{
-    margin-top: -90px;
-    margin-left: -10px;
+    width: 450px;
+    margin-left: -105px;
 }
-/*スキル２スタイル */
-.sSkil{
-    height: 600px;
-    width: 100%;
-    /*width: 110%;*/
-    position: absolute;
-    top: 2250px;
-    z-index: 500;
-}   
+
+/*スキル下段部分*/
 .sSkilInline{
     width: 85%;
     padding-left: 100px;
-}
-/*スキル画像  */
-.sSkil_img{
-    display: inline-flex;
-    left: 370px;
-    width: 200px;
-    height: 200px;
-}
-/*スキル文字  */
-.sSkil1{
-    display:flex;
-    height: 150px;
-    width: 100%;
-    margin-bottom: 25px;
-    margin-left: 35px;
-}
-.item{
-    color: #e6e6e6;
-    margin: 0px 0 5px 0;
-    border-bottom: 3px solid;
-    padding-bottom: 7px;
-    padding-top: 30px;
-}
-.SkilCat{
-    display: inline-flex;
-    width: 156px;
-    margin-left: 50px;
+    margin-top: 400px;
 }
 
-.pSkilbox{
-    display: inline-flex;
-    width: 680px;
+/*スキル文字  */
+.sSkil1_0{
+    /*sdisplay:flex;*/
+    background-image: url(../img/catsc.PNG);
+    background-repeat: no-repeat;
+    background-position: 95% 130px;
+    background-size: 350px;
+    /*背景↑*/
+    width: 80%;
+    height: auto;
+    margin: 0 100px 0 auto;
+    margin-bottom: 50px;
+    padding: 40px;
+    background-color: #151f33;
+    box-shadow:  5px 5px 9px #090d15,
+                -5px -5px 9px #213151;
+    border-radius: 15px;
+}
+
+.sSkil1_1{
+    /*sdisplay:flex;*/
+    background-image: url(../img/catds.PNG);
+    background-repeat: no-repeat;
+    background-position: 95% 130px;
+    background-size: 350px;
+    /*背景↑*/
+    width: 80%;
+    height: auto;
+    margin: 0 100px 0 auto;
+    margin-bottom: 50px;
+    padding: 40px;
+    background-color: #151f33;
+    box-shadow:  5px 5px 9px #090d15,
+                -5px -5px 9px #213151;
+    border-radius: 15px;
+}
+
+.sSkil1_2{
+    /*sdisplay:flex;*/
+    background-image: url(../img/catl.PNG);
+    background-repeat: no-repeat;
+    background-position: 95% 130px;
+    background-size: 350px;
+    /*背景↑*/
+    width: 80%;
+    height: auto;
+    margin: 0 100px 0 auto;
+    margin-bottom: 50px;
+    padding: 40px;
+    background-color: #151f33;
+    box-shadow:  5px 5px 9px #090d15,
+                -5px -5px 9px #213151;
+    border-radius: 15px;
+}
+
+.Skil1_item{
+    color: #fff;
+    margin: 5px 0 5px 0;
+    border-bottom: 3px solid;
+    padding-bottom: 14px;
+}
+
+/*元のCSS*/
+.pSkilbox_0{
     height: auto;
     color: transparent;
-    margin: 0 0 10px 0;
+    margin: 30px 300px 10px 0;
+    font-size: 30px;
 }
-.aSkilbox{
-    display: inline-flex;
-    width: 680px;
+
+/*JavaScriptにより差し替えるCSS*/
+.aSkilbox_f0{
     height: auto;
-    color:#e6e6e6;
-    margin: 0 0 10px 0;
-    animation: aSkilbox 0.5s ease 1s normal backwards;
+    color:#fff;
+    margin: 30px 300px 10px 0;
+    font-size: 30px;
+    animation: aSkilbox_f 0.5s ease 1s normal backwards;
+}
+
+/*元のCSS*/
+.pSkilbox_1{
+    height: auto;
+    color: transparent;
+    margin: 20px 0 10px 0;
+    font-size: 30px;
+}
+
+/*JavaScriptにより差し替えるCSS*/
+.aSkilbox_f1{
+    height: auto;
+    color:#fff;
+    margin: 20px 0 10px 0;
+    font-size: 30px;
+    animation: aSkilbox_f 0.5s ease 1s normal backwards;
 
 }
-@keyframes aSkilbox{
+
+@keyframes aSkilbox_f{
     0% {
       transform: translateY(20px);
       opacity: 0;
@@ -342,22 +423,18 @@ a{
     border-bottom: 4px;
 }
 
-.pmaj{
-    margin-top: 80px;
-} 
-.rowOne{
-    display: block;
-    height: 0px;
-    margin-bottom: -10px;
-}
+/*プログラミングスキルmargin*/
+/*.pmaj{
+    margin-top: 375px;
+} */
 
-/*実績スタイル  */
+/*実績スタイル-------------------------*/
 .sActual{
+    /*display: none;*/
+    position: absolute;
     height: 515px;
     width: 100%;
-    /*width: 110%;*/
-    position: absolute;
-    top: 3300px;
+    top: 6300px;
     z-index: 500;
 }   
 
@@ -369,6 +446,7 @@ a{
     height: auto;
     left: 370px;
 }
+
 .sActualLstep_img{
     position: relative;
     left: 246px;
@@ -382,71 +460,164 @@ a{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
 .sActualCat{
     /*background-color: mediumvioletred;*/
     position: relative;
     height: auto;
-    width: 100%;
+   /* width: 100%; */
     margin-bottom: 10px;
+    max-width: 800px;
+    min-width: 240px;
 }
+
 .sActualCat a{
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
 }
+
 .ActualMsgBox{
     display: inline-block;
     margin-top: 50px;
     margin-left: 10px;
 }
+
 .ActualMsgBox p{
     margin-left: 60px;
     font-size: 17px;
     font-weight: 900;
     color: #fff;
 }
-/*最後にスタイル  */
+
+/*最後にスタイル-------------------------*/
 .slast{
+    top: 50000px;
     height: 600px;
     width: 100%;
-    /*width: 110%;*/
+    padding-bottom: 300px;
     position: absolute;
-    top: 5000px;
     z-index: 500;
 }   
 
 /*最後に画像  */
 .catmaru_img{
     position: relative;
-    left: 800px;
-    width: 300px;
-    height: 300px;
-    margin-top: -155px;
+    width: 600px;
+    height: 600px;
+    left: 1080px;
+    margin-top: -125px;
 }
 
 /*最後に文字  */
-.slast1{
-    background-color: transparent;
-    height: 300px;
-    width: 750px;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    margin-left: 200px;
-    line-height: 30px;
-    font-weight: 900;
+.slast0{
+    width: 1920px;
+    height: auto;
+    line-height: 3.5em;
 }
+
+.slast0 p{
+    width: 1000px;
+    right: 470px;
+    font-size: 35px;
+    position: relative;
+}
+
+.slast1{
+    width: 1920px;
+    height: auto;
+    font-size: 35px;
+    line-height: 1.5em;
+}
+
+.slast1 p{
+    top: 450px;
+    right: 115px;
+    font-size: 35px;
+    position: relative;
+}
+
 .slastCat{
+    display: flex;
     margin-top: 40px;
     float:left;
     width: 0;
-
 }
+
+/*実績カルーセル-------------------------*/
+.slide_cont{
+    display: flex;
+    position: relative;
+    width: 900px;
+    height: auto;
+    right: 170px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin: 100px 17% 0 auto;
+    background-color: #fff;
+    box-shadow: inset 0 -5px 5px #151f33;
+    border-radius: 15px;
+}
+
+.slide_cont h3{
+    color: #151f33;
+}
+
+.slide_cont p{
+    font-size: 30px;
+}
+
+.sActual_cont{
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    height: auto;
+    border: none;
+}
+
+@keyframes slide_cont4 {
+     0% { 
+        margin-left: 0;
+    }
+     10% {
+        margin-left: -100%;
+    }
+     35% {
+        margin-left: -100%;
+    }
+     45% {
+        margin-left: -200%;
+    }
+     70% {
+        margin-left: -200%;
+    }
+     75% {
+        margin-left: 0%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
+.left_cont{
+     animation-name: slide_cont4; 
+     animation-duration: 20s;
+     animation-delay: 4s; 
+     animation-iteration-count: infinite;
+    }
+    
+.sActual_img2{
+    width: 900px;
+    height: auto;
+}    
+
 .sp_link{display: none;}
 .sActual_img_sp{display: none;}
 .pSkilbox_sp{display: none;}
 
 /* メディアごとのcss    -----------------------------------------------------------------*/
+/*スマートフォン用*/
 @media screen and (max-width:546px) {
  /*改行*/
     .pc-br{display: none;}
@@ -466,7 +637,8 @@ a{
         height: auto;
         width: 100%;
         line-height: 1.5;
-        background-color: #000;
+        background-color: #0d1117;
+        color: #151f33;
     }
     h1{
         font-size: 55px;
@@ -479,7 +651,7 @@ a{
         font-size: 20px;
     }
 
-    /*レスポンシブ対応用背景*/
+    /*タイトル：スマートフォン用-------------------------*/
     .sphelper_cat{
         display: block;
         position: absolute;
@@ -498,22 +670,7 @@ a{
         position: absolute;
     }
 
-    /*.video_title {
-        width: 100vw;
-        height: 620px;
-        position: relative;
-        object-fit: cover;
-    }*/
-
-   /* .img_title {
-        position: absolute;
-        left: -5%;
-        bottom: 330px;
-        animation: img_title 5s ease 1s normal backwards;
-        transform: scale(0.7);
-    }*/
-
-    /*固定リンク*/
+    /*固定リンク：スマートフォン用-------------------------*/
     .item_link {
         display:none;/*非表示*/
         z-index: 10000;
@@ -554,15 +711,20 @@ a{
         margin-left: -80px;
     }
 
-    /*プロフィール*/
+    /*プロフィール：スマートフォン用-------------------------*/
     .cHoby{
        /* display:none; */
         position: absolute;
         top: 800px;
         height: 1800px;
         width: 100%;
-       /* padding-left: 53px;*/
     }
+
+    .prof_img{
+        height: 200px;
+        width: 200px;
+    }
+    
     .cHobyBox{
         display: block;
         height: 800px;
@@ -589,20 +751,13 @@ a{
       width: 100%;
     }
 
-    /*スキル丸*/
-    .sSkil0{
-       /* display:none;*/
-       top: 2446px;
-       height: 500px;
-    }
-    
-    /*スキル*/
+    /*スキル：スマートフォン用-------------------------*/
     .sSkil{
     /* display:none; */
+    top: 2446px;
     height: auto;
     width: 100%;
     position: absolute;
-    top: 2515px;
     z-index: 500;
     margin-left: -28px;
     }
@@ -626,33 +781,6 @@ a{
         margin-left: 0px;
     }
     
-
-    .sp_bottm{
-        margin-bottom: 10px;}
-
-    /*.sp_left{
-        margin-left: -5px;
-        width: 100%;
-    }*/
-
-    /*.rowOne{
-        display: block;
-        height: 0px;
-        margin-bottom: 40px;
-        font-size: 15px;
-    }*/
- 
-   /*.pmaj{
-        margin-top: 90px;
-    }*/
-   /* .aSkilbox{
-        font-size: 15px;
-        width: 100%;
-    } */
-    .pSkilbox_sp{
-        /*margin-top: -75px;*/
-    }
-    
     .item {
         color: #fff;
         margin: 0px 0 5px 0;
@@ -662,22 +790,24 @@ a{
         font-size: 20px;
     }
 
-    .sSkil_img {
+    .SkilCat_sp{
         position: absolute;
         display: inline-flex;
         left: 25%;
         width: 220px;
         height: 220px;
-      /*  margin: 10px auto 0 -385px; */
         opacity: 0.1;
     }
+    
     
     .catsc{
         bottom: 600px;
     }
+
     .catds{
         bottom: 240px;
     }
+
     .catl{
         bottom: -30px;
     }
@@ -691,11 +821,12 @@ a{
         margin: 0 0 10px 0;
     }
 
-    /*実績*/
+    /*実績：スマートフォン用-------------------------*/
     .sActual{
        /* display:none; */
         top: 3486px;
     }
+
     .sActual_img {
         display: none;
     }
@@ -705,7 +836,6 @@ a{
         object-fit: cover;
         box-sizing:border-box;
         width: 100%;
-      /*  margin: 0 -37px 0 auto; */
     }
 
     .sActual1{
@@ -718,9 +848,11 @@ a{
         width: 100%;
         font-size: 15px;
     }
+
     .sActual h3{
         font-size: 23px;
     }
+
     .sActualCat{
         height: auto;
         width: 100%;
@@ -730,7 +862,7 @@ a{
         margin-top: 5px;
     }
 
-    /*最後に*/
+    /*最後に：スマートフォン用-------------------------*/
     .slast{
        /* display:none; */
        top: 5362px;
@@ -748,6 +880,7 @@ a{
     .slast nav{
         margin-left: 0px;
     }
+
     .catmaru_img{
         position: absolute;
         left: 0%;
@@ -758,7 +891,7 @@ a{
     }
 
 
-/* ハンバーガーメニュー */
+/* ハンバーガーメニュー：スマートフォン用------------------------- */
 
 /* チェックボックスを非表示にする */
 .drawer_hidden {
@@ -767,16 +900,6 @@ a{
   
   /* ハンバーガーアイコンの設置スペース */
   .drawer_open {
-    /*
-    display: flex;
-    height: 60px;
-    width: 60px;
-    justify-content: center;
-    align-items: center;
-    position: relative; */
-    /*z-index: 100000;*//* 重なり順を一番上にする */
-    /*cursor: pointer;
-    left: 80%;*/
     display: inline-block;
     top: 25px;
     height: 60px;
@@ -844,15 +967,19 @@ a{
   .nav_item1:active{
     background: #121824;
   }
+
   .nav_item2:active{
     background: #121824;
   }
+
   .nav_item3:active{
     background: #121824;
   }
+
   .nav_item4:active{
     background: #121824;
   }
+
   .nav_item5:active{
     background: #121824;
   }
@@ -860,11 +987,13 @@ a{
   .nav_list li{
      border-bottom: 3px solid #fff;
   }
+
   /* メニュー黒ポチを消す */
   .nav_list {
     list-style: none;
     font-size: 25px;
   }
+
   .nav_list a{
     color: #9db322;
   }
@@ -874,6 +1003,3 @@ a{
     left: 0;/* メニューを画面に入れる */
   }
     }
-
-
-

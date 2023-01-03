@@ -3,14 +3,14 @@ window.addEventListener("scroll", function() {
 
   let scroll = window.pageYOffset;
 
-  if (scroll > 4800) {
+  if (scroll > 8000) {
     document.body.style.backgroundColor = '#fff';
-  } else if (scroll > 3000) {
+  } else if (scroll > 6500) {
     document.body.style.backgroundColor = '#4c6cb3';
-  } else if (scroll > 1660) {
+  } else if (scroll > 2900) {
     document.body.style.backgroundColor = '#151f33';
   } else {
-    document.body.style.backgroundColor = '#000';
+    document.body.style.backgroundColor = '#0d1117';
   }
 
 });
@@ -83,12 +83,12 @@ if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -500)
                                               && (elemSkilFlg !== true)) {
     elemSkilFlg = true;
     //フェードインアニメーション
-    document.getElementById("pSkilbox0").className = "aSkilbox rowOne";
-    document.getElementById("pSkilbox1").className = "aSkilbox pmaj";
-    document.getElementById("pSkilbox2").className = "aSkilbox rowOne";
-    document.getElementById("pSkilbox3").className = "aSkilbox";
-    document.getElementById("pSkilbox4").className = "aSkilbox rowOne";
-    document.getElementById("pSkilbox5").className = "aSkilbox";
+    document.getElementById("pSkilbox0").className = "aSkilbox_f0 rowOne";
+    document.getElementById("pSkilbox1").className = "aSkilbox_f1 pmaj";
+    document.getElementById("pSkilbox2").className = "aSkilbox_f0 rowOne";
+    document.getElementById("pSkilbox3").className = "aSkilbox_f1";
+    document.getElementById("pSkilbox4").className = "aSkilbox_f0 rowOne";
+    document.getElementById("pSkilbox5").className = "aSkilbox_f1";
   }
 });
 
