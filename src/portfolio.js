@@ -43,8 +43,12 @@ if(navigator.userAgent.match(/(iPhone|iPod|Android.*Mobile)/i)){
     ucyuFlg = document.getElementById("nami");
     //趣味
     elemHoby = document.getElementById("cHoby_img0");
-    //スキル
-    elemSkil = document.getElementById("pSkilbox0");
+    //スキル：プログラミング
+    elemSkil0 = document.getElementById("sSkil1_0");
+    //スキル：小売業
+    elemSkil1 = document.getElementById("sSkil1_1");
+    //スキル：LINE
+    elemSkil2 = document.getElementById("sSkil1_2");
 
     
   }
@@ -52,7 +56,10 @@ if(navigator.userAgent.match(/(iPhone|iPod|Android.*Mobile)/i)){
 //趣味スクロールで出現
 let ucyuFlg = false; //背景宇宙 各セクションごとにフラグが必要
 let elemHobyFlg = false;//趣味
-let elemSkilFlg = false;//スキル
+let elemSkil0Flg = false;//スキル：プログラミング
+let elemSkil1Flg = false;//スキル：小売業
+let elemSkil2Flg = false;//スキル：LINE
+
 // ターゲットの画面トップからの距離
 window.addEventListener("scroll", function (){
 
@@ -78,17 +85,28 @@ if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -500)
     document.getElementById("cHoby_img2").className = "aHoby_img big_cat";
   }
 
-  //スキル----------------------------------------------------------------------------
-  if ((elemSkil.getBoundingClientRect().top <= window.innerHeight) 
-                                              && (elemSkilFlg !== true)) {
-    elemSkilFlg = true;
+  //スキル：プログラミング----------------------------------------------------------------------------
+  if ((elemSkil0.getBoundingClientRect().top <= window.innerHeight) 
+                                              && (elemSkil0Flg !== true)) {
+    elemSkil0Flg = true;
     //フェードインアニメーション
-    document.getElementById("pSkilbox0").className = "aSkilbox_f0 rowOne";
-    document.getElementById("pSkilbox1").className = "aSkilbox_f1 pmaj";
-    document.getElementById("pSkilbox2").className = "aSkilbox_f0 rowOne";
-    document.getElementById("pSkilbox3").className = "aSkilbox_f1";
-    document.getElementById("pSkilbox4").className = "aSkilbox_f0 rowOne";
-    document.getElementById("pSkilbox5").className = "aSkilbox_f1";
+    document.getElementById("sSkil1_0").className = "sSkil1_0a";
+  }
+
+  //スキル：小売業----------------------------------------------------------------------------
+  if ((elemSkil1.getBoundingClientRect().top <= window.innerHeight) 
+                                              && (elemSkil1Flg !== true)) {
+    elemSkil1Flg = true;
+    //フェードインアニメーション
+    document.getElementById("sSkil1_1").className = "sSkil1_1a";
+  }
+
+    //スキル：LINE----------------------------------------------------------------------------
+    if ((elemSkil2.getBoundingClientRect().top <= window.innerHeight) 
+                                              && (elemSkil2Flg !== true)) {
+    elemSkil2Flg = true;
+    //フェードインアニメーション
+    document.getElementById("sSkil1_2").className = "sSkil1_2a";
   }
 });
 
