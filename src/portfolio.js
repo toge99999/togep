@@ -3,14 +3,26 @@ window.addEventListener("scroll", function() {
 
   let scroll = window.pageYOffset;
 
-  if (scroll > 8000) {
+  if (scroll > 5000) {
     document.body.style.backgroundColor = '#fff';
-  } else if (scroll > 6500) {
+    document.getElementById("hosi0").className = 'hosi0a';
+    document.getElementById("hosi1").className = 'hosi1a';
+    document.getElementById("item_link").className = 'item_linka';
+  } else if (scroll > 3800) {
     document.body.style.backgroundColor = '#4c6cb3';
-  } else if (scroll > 2900) {
+    document.getElementById("hosi0").className = 'hosi0a';
+    document.getElementById("hosi1").className = 'hosi1a';
+    document.getElementById("item_link").className = 'item_linka';
+  } else if (scroll > 2500) {
     document.body.style.backgroundColor = '#151f33';
+    document.getElementById("hosi0").className = 'hosi0';
+    document.getElementById("hosi1").className = 'hosi1';
+    document.getElementById("item_link").className = 'item_link';
   } else {
     document.body.style.backgroundColor = '#0d1117';
+    document.getElementById("hosi0").className = 'hosi0';
+    document.getElementById("hosi1").className = 'hosi1';
+    document.getElementById("item_link").className = 'item_link';
   }
 
 });
@@ -33,7 +45,6 @@ if(navigator.userAgent.match(/(iPhone|iPod|Android.*Mobile)/i)){
   window.onload = function(){
 
     let switchimg = function(){
-      //document.getElementById("simgCat").setAttribute('class', 'img_cat2');
       document.getElementById("simgCat").style.backgroundImage = 'url(../img/cat.PNG)'
     }
     window.setTimeout(switchimg, 3000);
@@ -72,6 +83,17 @@ if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -500)
  } else {
     document.getElementById("video_title").style.filter = "blur(0px)";
  }
+
+//背景星
+ if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -900) 
+                                                && (ucyuFlg !== true)) {
+    document.getElementById("hosi0").style.visibility="visible";
+    document.getElementById("hosi1").style.visibility="visible";
+  } else {
+    document.getElementById("hosi0").style.visibility="hidden";
+    document.getElementById("hosi1").style.visibility="hidden";
+ }
+                                             
 //やることは下記のアニメーションの処理と同等
 
 // 画面トップからの距離から画面の高さより小さければ実行する
@@ -86,7 +108,7 @@ if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -500)
   }
 
   //スキル：プログラミング----------------------------------------------------------------------------
-  if ((elemSkil0.getBoundingClientRect().top <= window.innerHeight) 
+  if ((elemSkil0.getBoundingClientRect().top <= window.innerHeight - 200) 
                                               && (elemSkil0Flg !== true)) {
     elemSkil0Flg = true;
     //フェードインアニメーション
@@ -94,7 +116,7 @@ if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -500)
   }
 
   //スキル：小売業----------------------------------------------------------------------------
-  if ((elemSkil1.getBoundingClientRect().top <= window.innerHeight) 
+  if ((elemSkil1.getBoundingClientRect().top <= window.innerHeight - 200) 
                                               && (elemSkil1Flg !== true)) {
     elemSkil1Flg = true;
     //フェードインアニメーション
@@ -102,7 +124,7 @@ if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -500)
   }
 
     //スキル：LINE----------------------------------------------------------------------------
-    if ((elemSkil2.getBoundingClientRect().top <= window.innerHeight) 
+    if ((elemSkil2.getBoundingClientRect().top <= window.innerHeight - 200) 
                                               && (elemSkil2Flg !== true)) {
     elemSkil2Flg = true;
     //フェードインアニメーション
@@ -131,3 +153,41 @@ function MenuClose(){
   //ハンバーガーメニューを閉じる
   document.getElementById("drawer_input").checked= false;
 }
+
+//星点滅
+/*window.addEventListener('DOMContentLoaded', function(){
+
+  setTimeout(() => {
+    document.getElementById("hosi0").style.filter = "opacity(0.2)";
+    document.getElementById("hosi1").style.filter = "opacity(1)";
+  }, 3000);
+
+  setTimeout(() => {
+    document.getElementById("hosi0").style.filter = "opacity(1)";
+    document.getElementById("hosi1").style.filter = "opacity(0.2)";
+  }, 10000);
+
+  setTimeout(() => {
+    document.getElementById("hosi0").style.filter = "opacity(0.8)";
+    document.getElementById("hosi1").style.filter = "opacity(1)";
+  }, 15000);
+
+
+  setTimeout(() => {
+    document.getElementById("hosi0").style.filter = "opacity(0.2)";
+    document.getElementById("hosi1").style.filter = "opacity(0.8)";
+  }, 12000);
+
+  setTimeout(() => {
+    document.getElementById("hosi0").style.filter = "opacity(1)";
+    document.getElementById("hosi1").style.filter = "opacity(1)";
+  }, 16000);
+
+
+  setTimeout(() => {
+    document.getElementById("hosi0").style.filter = "opacity(0)";
+    document.getElementById("hosi1").style.filter = "opacity(0)";
+  }, 19000);
+
+});
+*/

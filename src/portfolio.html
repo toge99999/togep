@@ -12,7 +12,7 @@
     <script src="portfolio.js"></script>
 
     <!-- 各項目へのリンク -->
-            <nav class="item_link">
+            <nav class="item_link" id="item_link">
                 <h1 class="li_link li_linkPl"><a href="javascript:void(0)" onclick="autoScroll(document.getElementById('prof_img0').getBoundingClientRect().top);">PROFILE</a></h1>
                 <h1 class="li_link"><a href="javascript:void(0)" onclick="autoScroll(document.getElementById('sSkil0').getBoundingClientRect().top);">SKILL</a></h1>
                 <h1 class="li_link"><a href="javascript:void(0)" onclick="autoScroll(document.getElementById('sActual').getBoundingClientRect().top);">WORKS</a></h1>
@@ -97,12 +97,12 @@
                 <li class="sSkil0Box">
                     <div class="sSkil0CatB">
                         <img class="sSkil0Cir_img" id="sSkil0Cir_img" src="../img/hc.PNG">
-                        <h3>html / CSS<BR>基本操作は可能です</h3>
+                        <h3>html / CSS<BR>シンプルなWebページ制作は可能</h3>
                     </div>
 
                     <div class="sSkil0CatB">
                         <img class="sSkil0Cir_img" id="sSkil0Cir_img" src="../img/js.PNG">
-                        <h3>JavaScript<BR>🐈</h3>
+                        <h3>JavaScript<BR>調べながらなんとか</h3>
                     </div>
 
                     <div class="sSkil0CatB">
@@ -114,23 +114,22 @@
                 
                 <ul class="sSkilInline">
                     <li class="sSkil1_0" id="sSkil1_0">
-                    <h3 class="Skil1_item">◆ プログラミング</h3>
+                    <h3 class="Skil1_item" style="font-size: 25px;"> プログラミング</h3>
                         <p class="pSkilbox0" id="pSkilbox0">
                             【HTML/CSS/JavaScript】<br>　独学3か月<br>
                             【PHP(Laravel)】<br>　独学1か月<br>
-                            【開発ツール】<br>　VsCode/XAMPP<br>　Git/Docker<br><br><br>
+                            【開発ツール】<br>　VsCode/XAMPP<br>　Git/Docker<br><br><br><br>
                         </p>
                         <p class="pSkilbox1" id="pSkilbox1">
                             HTML/CSS/JavaScriptの基礎を学び当ポートフォリオサイトを開発。<br>
                             また、PHP(Laravel)を使用した業務系Webシステムも開発しました。<br>
-                            業務系Webシステム詳細は、<a>こちら</a>をご覧ください。
                         </p>
                     </li>
 
                     <li class="sSkil1_1" id="sSkil1_1">
-                    <h3 class="Skil1_item">◆ 小売業　接客版売</h3>
+                    <h3 class="Skil1_item" style="font-size: 25px;"> 小売業　接客版売</h3>
                         <p class="pSkilbox0 pmaj" id="pSkilbox2">
-                            【登録販売者】<br>　14年<br><br><br><br><br><br><br>
+                            【登録販売者】<br>　14年<br><br><br><br><br><br><br><br><br>
                         </p>
                         <p class="pSkilbox1" id="pSkilbox3">
                             地域の皆様方のセルフメディケーション支援の為、お悩みや体質に合わせたOTC医薬品のご紹介、日々の健康に役立つ保健薬や健康食品のご提案、ご自宅でできる健康アドバイスなどを専門に行っております。
@@ -138,10 +137,10 @@
                     </li>
 
                     <li class="sSkil1_2" id="sSkil1_2">
-                    <h3 class="Skil1_item">◆ 公式LINE構築</h3>
+                    <h3 class="Skil1_item" style="font-size: 25px;"> 公式LINE構築</h3>
                         <p class="pSkilbox0 pmaj" id="pSkilbox4">
                             【LINE構築】<br>　独学3か月<br>
-                            【使用ツール】<br>　Lステップ<br><br><br><br><br>
+                            【使用ツール】<br>　Lステップ<br><br><br><br><br><br><br>
                         </p>
                         <p class="pSkilbox1" id="pSkilbox5">
                             複雑な構築、入り組んだ条件分岐が得意です。<br>
@@ -153,35 +152,53 @@
 
         <!-- 実績 -->
         <section class="sActual" id="sActual" name="sActual">
-            <li><h1>WORKS</h1></li>
-            <ul class="slide_cont">
-                <li class="sActual_cont left_cont">
-                    <div>
-                        <img class="sActual_img2" src="../img/screen.png">
+            <h1>WORKS</h1>
+            <ul class="actualTb">
+                <li class="actualTbG">
+                    <div class="actualTbItem">
+                        <img class="sActual_img" src="../img/screen.png">
                         <a href="https://toge99999.github.io/togep/src/portfolio.html"></a>
+                        <h3 style="font-size: 25px;"> ポートフォリオサイト</h3>
+                        <p>
+                            本サイトです。
+                            <br>初めてのWebサイト作成でしたが、要素の配置に苦戦しつつも1か月程度で作成しました。
+                            <br>また、個性が出るようにネコの要素をふんだんに反映させました。
+                        </p>
                     </div>
-                    <h3>◆ ポートフォリオサイト</h3><br>
-                    <p>本サイトです。<br>初めてのwebサイト作成でしたが、要素の配置に苦戦しつつも1か月程度で作成しました。<br>また、個性が出るようにネコの要素をふんだんに反映させました。</p>
+
+                    <div class="actualTbItem">
+                        <img class="sActual_img" src="../img/coming soon .png">
+                        <!--  <a href="https://lin.ee/JZQdWSi"></a> -->
+                        <h3 style="font-size: 25px;"> Laravelデモシステム</h3>
+                        <p>
+                            LaravelフレームワークでAdminLTEを使用し、商品管理のWEBシステムを開発しました。
+                            <Br>MVCモデルの理解やLinux操作の基礎が学べました。
+                            <br>【開発ツール】Docker/WSL2/Ubuntu/Terminal
+                        </p>
+                    </div>
                 </li>
 
-                <li class="sActual_cont">
-                    <div>
-                        <img class="sActual_img2" src="../img/line.png">
+                <li class="actualTbG">
+                    <div class="actualTbItem">
+                        <img class="sActual_img" src="../img/line.png">
                         <a href="https://lin.ee/JZQdWSi"></a>
+                        <h3 style="font-size: 25px;"> 公式LINEデモアカウント</h3>
+                        <p>
+                            ネコのいるカフェ併設型の架空のコワーキングスペースをベースに、
+                            <br>公式LINEではどのようなことができるかを紹介しています。
+                        </p>
                     </div>
-                    <h3>◆ 公式LINE　デモアカウント</h3><br>
-                    <p>ネコのいるカフェ併設型の<BR>架空のコワーキングスペースをベースに、<br>公式LINEではどのようなことができるかを<br>紹介しています。</p>
-                </li>
 
-                <li class="sActual_cont">
-                    <div>
-                        <img class="sActual_img2" src="../img/coming soon .png">
-                        <a href="https://lin.ee/JZQdWSi"></a>
+                    <div class="actualTbItem">
+                        <img class="sActual_img" src="../img/cat3d.png">
+                        <!--  <a href="https://lin.ee/JZQdWSi"></a> -->
+                        <h3 style="font-size: 25px;"> 🐈</h3>
+                        <p>
+                            <br>
+                            <br>
+                        </p>
                     </div>
-                    <h3>◆ Laravelデモシステム</h3>
-                    <p>LaravelフレームワークでAdminLTEを使用し、商品管理のWEBシステムを開発しました。<Br>MVCモデルの理解やLinux操作の基礎が学べました。<br>使用したもの：Docker/WSL2/Ubuntu/Terminal</p>
                 </li>
-
             </ul>
         </section>
 
@@ -201,6 +218,7 @@
                     これからも様々な制作に挑戦していきたいです。</p>
                 </div>
         </section>
-
-    </body><!-- 画面に表示されるエリアの終了 -->
+    <biv class="hosi0" id="hosi0"></biv>
+        <biv class="hosi1" id="hosi1"></biv>
+        </body><!-- 画面に表示されるエリアの終了 -->
 </html>

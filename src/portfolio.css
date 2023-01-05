@@ -7,6 +7,94 @@
 .sActual_img_sp{display: none;}
 .pSkilbox_sp{display: none;}
 
+/*背景星*/
+.hosi0{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/hosi0.PNG);
+    opacity: 0.6;
+    animation: hosi0 10000s infinite linear;
+    animation-iteration-count: infinite;
+  }
+
+  .hosi1{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/hosi1.PNG);
+    opacity: 0.6;
+    animation: hosi1 5000s infinite linear;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes hosi0 {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100000px -100000px;
+    }
+}
+@keyframes hosi1 {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100000px -100000px;
+    }
+}
+
+/*背景星下部*/
+.hosi0a{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/hosi0.PNG);
+    opacity: 0.4;
+    animation: hosi0a 10000s infinite linear;
+    animation-iteration-count: infinite;
+  }
+
+  .hosi1a{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/hosi1.PNG);
+    opacity: 0.4;
+    animation: hosi1a 5000s infinite linear;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes hosi0a {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 -100000px;
+    }
+}
+@keyframes hosi1a {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 -100000px;
+    }
+}
+
 body{
     /* カーソル*/
     cursor: url(../img/ufo.png), auto;
@@ -17,7 +105,6 @@ body{
    font-family: 'DotGothic16', sans-serif;
    letter-spacing: 0.2em;
    font-weight: 900;
-
    /* 背景色初期値*/
       background-color: #0d1117;
   }
@@ -27,7 +114,7 @@ body{
    padding: 0px;
 }
 
-.item_link,.nav_content,.cTitle,.cHoby,.sSkil,.sActual,.slast{
+.item_link,.item_linka,.nav_content,.cTitle,.cHoby,.sSkil,.sActual,.slast{
     width: 1920px;
     height: auto;
 }
@@ -36,23 +123,17 @@ h1{
     font-size: 50px;
 	text-align:center;
 	line-height:0.95em;
-	text-shadow: 0 0 0.2em #fff;
+	text-shadow: 0 0 0.2em #d2e8ff;
 }
 
 h3,p{
-    font-size: 25px;
-    color: #fff;
-    font-weight: 900;
+    font-size: 20px;
+    color: #d2e8ff;
 }
 
 a{
     color: #183c7f;
-    font-weight: 900;
     text-shadow: 0 0 0 #000;
-}
-
-p{
-    color: #151f33;
 }
 
 /* フォント白 */
@@ -95,11 +176,12 @@ a{
 }
  /*タイトル波*/
  .nami{
-    width: 100%;
     position: absolute;
-    bottom: -120px;
     z-index: 500;
+    width: 100%;
+    bottom: -30px;
  }
+
 /*タイトルロゴ*/
 .img_title{
     left: 38%;
@@ -114,9 +196,11 @@ a{
 .img_cat{
     position: absolute;
     float: left;
-    width: 500px;
-    height: 540px;
+    width: 755px;
+    height: 755px;
     background-image: url(../img/cat2.PNG);
+    background-repeat: no-repeat;
+    background-size: 725px;
     animation: img_cat 10s ease 1s normal backwards;
     z-index: 500;
     bottom: 100px;
@@ -164,6 +248,22 @@ a{
     position: fixed;
     background-color: #0d1117;   
   }
+/*色変更*/
+  .item_linka {
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    z-index: 10000;
+    position: fixed;
+    background-color: #9db322;
+  }
+
+  .item_linka a{
+    color: #d2e8ff;   
+  }
 
 .li_link{
     margin-top: -20px;
@@ -190,6 +290,26 @@ a{
 }
 
 /*プロフィールスタイル-------------------------*/
+.cHoby{
+    z-index: 500;
+}
+
+.cHoby h1:before {
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    display: block;
+    background: #d2e8ff;
+    transform: rotate(45deg);
+    z-index: -10;
+    left: 0;
+    right: 0;
+    top: -3px;
+    margin: auto;
+    animation: rotate-anime 20s linear infinite;
+}
+
 .prof_img{
     height: 300px;
     width: 300px;
@@ -259,7 +379,7 @@ a{
   }
 
 .cHoby1{
-    background-color:  #fff;
+    background-color:  #d2e8ff;
     height: 150px;
     width: 300px;
     margin-bottom: 10px;
@@ -281,12 +401,28 @@ a{
     top: 2800px;
     position: absolute;
     width: 100%;
-    height: 300px;
+    height: auto;
     z-index: 500;
 }
 
+.sSkil h1:before {
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    display: block;
+    background: #d2e8ff;
+    transform: rotate(45deg);
+    z-index: -10;
+    left: 0;
+    right: 0;
+    top: -3px;
+    margin: auto;
+    animation: rotate-anime 20s linear infinite;
+}
+
 .sSkil p{
-    color: #fff;
+    color: #d2e8ff;
 }
 
 .sSkil0Box{
@@ -303,30 +439,32 @@ a{
     width: 250px;
     margin: 45px 80px 0 80px;
     border-radius: 50%;
-    color: #fff;
+    color: #d2e8ff;
 }
 
 .sSkil0CatB h3{
     position: relative;
     margin-top: -185px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .sSkil0Cir_img{
     transition: transform 0.3s ease-out;
 }
+
 .sSkil0Cir_img:hover {
-  transform: rotate(720deg);
-  width: 110%;
-  height: auto;
+    transform: rotate(720deg);
+    width: 110%;
+    height: auto;
 }
 
 /*以下スキル枠部分*/
 .sSkilInline{
     display: flex;
-    width: 100%;
-    padding-left: 60px;
+    width: 80%;
     margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*スキル文字  */
@@ -335,15 +473,15 @@ a{
     opacity: 0;
     background-image: url(../img/catsc.PNG);
     background-repeat: no-repeat;
-    background-position: 95% 130px;
-    background-size: 250px;
+    background-position: 104% 130px;
+    background-size: 220px;
     /*背景↑*/
-    width: 22%;
-    min-width: 390px;
+    width: 19%;
+    min-width: 350px;
     height: auto;
-    margin: 0 100px 0 auto;
+    margin: 0 auto 0 auto;
     margin-bottom: 50px;
-    padding: 40px;
+    padding: 20px 30px 30px 30px;
     background-color: #151f33;
     box-shadow:  5px 5px 9px #090d15,
                 -5px -5px 9px #213151;
@@ -354,15 +492,15 @@ a{
 .sSkil1_0a{
     background-image: url(../img/catsc.PNG);
     background-repeat: no-repeat;
-    background-position: 95% 130px;
-    background-size: 250px;
+    background-position: 104% 130px;
+    background-size: 220px;
     /*背景↑*/
-    width: 22%;
+    width: 19%;
     min-width: 350px;
     height: auto;
-    margin: 0 100px 0 auto;
+    margin: 0 auto 0 auto;
     margin-bottom: 50px;
-    padding: 40px;
+    padding: 20px 30px 30px 30px;
     background-color: #151f33;
     box-shadow:  5px 5px 9px #090d15,
                 -5px -5px 9px #213151;
@@ -380,15 +518,15 @@ a{
     opacity: 0;
     background-image: url(../img/catds.PNG);
     background-repeat: no-repeat;
-    background-position: 95% 130px;
-    background-size: 250px;
+    background-position: 100% 130px;
+    background-size: 220px;
     /*背景↑*/
-    width: 22%;
+    width: 19%;
     min-width: 350px;
     height: auto;
-    margin: 0 100px 0 auto;
+    margin: 0 auto 0 auto;
     margin-bottom: 50px;
-    padding: 40px;
+    padding: 20px 30px 30px 30px;
     background-color: #151f33;
     box-shadow:  5px 5px 9px #090d15,
                 -5px -5px 9px #213151;
@@ -399,15 +537,15 @@ a{
 .sSkil1_1a{
     background-image: url(../img/catds.PNG);
     background-repeat: no-repeat;
-    background-position: 95% 130px;
-    background-size: 250px;
+    background-position: 100% 130px;
+    background-size: 220px;
     /*背景↑*/
-    width: 22%;
+    width: 19%;
     min-width: 350px;
     height: auto;
-    margin: 0 100px 0 auto;
+    margin: 0 auto 0 auto;
     margin-bottom: 50px;
-    padding: 40px;
+    padding: 20px 30px 30px 30px;
     background-color: #151f33;
     box-shadow:  5px 5px 9px #090d15,
                 -5px -5px 9px #213151;
@@ -426,15 +564,15 @@ a{
     opacity: 0;
     background-image: url(../img/catl.PNG);
     background-repeat: no-repeat;
-    background-position: 95% 130px;
-    background-size: 250px;
+    background-position: 100% 130px;
+    background-size: 220px;
     /*背景↑*/
-    width: 22%;
+    width: 19%;
     min-width: 350px;
     height: auto;
-    margin: 0 100px 0 auto;
+    margin: 0 auto 0 auto;
     margin-bottom: 50px;
-    padding: 40px;
+    padding: 20px 30px 30px 30px;
     background-color: #151f33;
     box-shadow:  5px 5px 9px #090d15,
                 -5px -5px 9px #213151;
@@ -445,15 +583,15 @@ a{
 .sSkil1_2a{
     background-image: url(../img/catl.PNG);
     background-repeat: no-repeat;
-    background-position: 95% 130px;
-    background-size: 250px;
+    background-position: 100% 130px;
+    background-size: 220px;
     /*背景↑*/
-    width: 22%;
+    width: 19%;
     min-width: 350px;
     height: auto;
-    margin: 0 100px 0 auto;
+    margin: 0 auto 0 auto;
     margin-bottom: 50px;
-    padding: 40px;
+    padding: 20px 30px 30px 30px;
     background-color: #151f33;
     box-shadow:  5px 5px 9px #090d15,
                 -5px -5px 9px #213151;
@@ -472,6 +610,7 @@ a{
 @keyframes aSkilbox_f{
     0% {
         transform: translateY(20px);
+        transform:rotate(-45deg);
         opacity: 0;
     }
     100% {
@@ -481,7 +620,7 @@ a{
 }
 
 .Skil1_item{
-    color: #fff;
+    color: #d2e8ff;
     margin: 5px 0 5px 0;
     border-bottom: 3px solid;
     padding-bottom: 14px;
@@ -509,67 +648,72 @@ a{
 .sActual{
     /*display: none;*/
     position: absolute;
-    height: 515px;
     width: 100%;
-    top: 4300px;
+    top: 4500px;
     z-index: 500;
-}   
-
-/*実績画像  */
-.sActual_img{
-    max-width: 800px;
-    min-width: 240px;
-    width: 100%;
-    height: auto;
-    left: 370px;
 }
 
-.sActualLstep_img{
-    position: relative;
-    left: 246px;
-    height: 100%;
+.sActual h1{
+    margin-bottom: 80px;
 }
 
-/*実績文字  */
-.sActual1{
-    display:flex;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.sActualCat{
-    /*background-color: mediumvioletred;*/
-    position: relative;
-    height: auto;
-   /* width: 100%; */
-    margin-bottom: 10px;
-    max-width: 800px;
-    min-width: 240px;
-}
-
-.sActualCat a{
-    display: block;
+.sActual h1:before {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    content: '';
+    height: 50px;
+    width: 50px;
+    display: block;
+    background: #d2e8ff;
+    transform: rotate(45deg);
+    z-index: -10;
+    left: 0;
+    right: 0;
+    top: -3px;
+    margin: auto;
+    animation: rotate-anime 20s linear infinite;
 }
 
-.ActualMsgBox{
-    display: inline-block;
-    margin-top: 50px;
-    margin-left: 10px;
+.actualTb{
+    table-layout: fixed;
+	width: 100%;
 }
 
-.ActualMsgBox p{
-    margin-left: 60px;
-    font-size: 17px;
-    font-weight: 900;
-    color: #fff;
+.actualTbG{
+    display:flex;
+    justify-content: center;
 }
+    
+
+.actualTbItem{
+    width: 500px;
+    margin: 40px;
+    padding: 20px;
+    background-color: rgb(35, 162, 178);
+    border-radius: 15px;
+}
+
+.actualTbItem:hover{
+}
+
+.actualTbItem p,h3{
+    padding: 10px 10px 0 10px;
+    color: #d2e8ff;
+}
+
+.actualTbItem h3{
+    padding-bottom: 7px;
+    border-bottom:solid 3px #d2e8ff;
+}
+.sActual_img{
+    width: 500px;
+    height: 260px;
+    object-fit: cover;
+    box-shadow:  5px 5px 3px #183c7f;
+}    
 
 /*最後にスタイル-------------------------*/
 .slast{
+    display: none;
     top: 5500px;
     height: 600px;
     width: 100%;
@@ -622,73 +766,10 @@ a{
     width: 0;
 }
 
-/*実績カルーセル-------------------------*/
-.slide_cont{
-    display: flex;
-    position: relative;
-    width: 600px;
-    height: auto;
-    right: 170px;
-    overflow: hidden;
-    padding-bottom: 20px;
-    margin: 100px 50% 0 auto;
-    background-color: #fff;
-    box-shadow: inset 0 -5px 5px #151f33;
-    border-radius: 15px;
-}
+/*星*/
 
-.slide_cont h3{
-    color: #151f33;
-    font-size: 25px;
-}
 
-.slide_cont p{
-    font-size: 20px;
-}
 
-.sActual_cont{
-    margin: 0;
-    padding: 0;
-    width: inherit;
-    height: auto;
-    border: none;
-}
-
-@keyframes slide_cont4 {
-     0% { 
-        margin-left: 0;
-    }
-     10% {
-        margin-left: -100%;
-    }
-     35% {
-        margin-left: -100%;
-    }
-     45% {
-        margin-left: -200%;
-    }
-     70% {
-        margin-left: -200%;
-    }
-     75% {
-        margin-left: 0%;
-    }
-    100% {
-        margin-left: 0%;
-    }
-}
-
-.left_cont{
-     animation-name: slide_cont4; 
-     animation-duration: 20s;
-     animation-delay: 4s; 
-     animation-iteration-count: infinite;
-    }
-    
-.sActual_img2{
-    width: 600px;
-    height: auto;
-}    
 
 .sp_link{display: none;}
 .sActual_img_sp{display: none;}
@@ -861,7 +942,7 @@ a{
     }
     
     .item {
-        color: #fff;
+        color: #d2e8ff;
         margin: 0px 0 5px 0;
         border-bottom: 3px solid;
         padding-bottom: 7px;
@@ -894,7 +975,7 @@ a{
     .pSkilbox_sp{
         display: block;
         font-size: 15px;
-        color: #fff;
+        color: #d2e8ff;
         width: 100%;
         height: auto;
         margin: 0 0 10px 0;
@@ -999,7 +1080,7 @@ a{
     height: 3px;
     width: 25px;
     border-radius: 3px;
-    background: #fff;
+    background: #d2e8ff;
     transition: 0.5s;
     position: absolute;
     
@@ -1064,7 +1145,7 @@ a{
   }
 
   .nav_list li{
-     border-bottom: 3px solid #fff;
+     border-bottom: 3px solid #d2e8ff;
   }
 
   /* メニュー黒ポチを消す */
