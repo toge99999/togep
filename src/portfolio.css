@@ -812,8 +812,52 @@ a{
         width: 1024px;
         height: auto;
     }
+
+    .li_link{
+        font-family: 'DotGothic16', sans-serif;
+        margin-top: -20px;
+        margin-right: 50px;
+        padding-left: 15px;
+        font-size: 30px;
+        display: inline-block;
+        font-weight:bold;
+        transition:.5s;
+        }
     
+
+        /*タイトル背景*/
+    .video_title{
+        z-index: 500;
+        width: 1024px;
+        height: 700px;
+        position: relative;
+        object-fit: cover;
+    }
+
+    .img_title{
+        z-index: 500;
+        left: 55%;
+        height: 40%;
+        width: 40%;
+        position: absolute;
+        bottom: 300px;
+        animation: img_title 5s ease 1s normal backwards;
 }
+
+    .img_cat{
+        position: absolute;
+        float: left;
+        width: 500px;
+        height: 500px;
+        background-image: url(../img/cat2.PNG);
+        background-repeat: no-repeat;
+        background-size: 500px;
+        animation: img_cat 10s ease 1s normal backwards;
+        z-index: 500;
+        bottom: 40px;
+}
+    }
+
 
 /*スマートフォン用*/
 @media screen and (max-width:546px) {
