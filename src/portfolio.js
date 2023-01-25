@@ -3,7 +3,7 @@ window.addEventListener("scroll", function() {
 
   let scroll = window.pageYOffset;
 
-  if (scroll > 5000) {
+  if (scroll > 5800) {
     document.body.style.backgroundColor = '#fff';
     document.getElementById("hosi0").className = 'hosi0a';
     document.getElementById("hosi1").className = 'hosi1a';
@@ -80,16 +80,24 @@ if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -500)
                                                 && (ucyuFlg !== true)) {
     //ぼやける
     document.getElementById("video_title").style.filter = "blur(5px)";
+    document.getElementById("hosi0").style.display = "block";
+    document.getElementById("hosi1").style.display = "block";
  } else {
     document.getElementById("video_title").style.filter = "blur(0px)";
+    document.getElementById("hosi0").style.display = "none";
+    document.getElementById("hosi1").style.display = "none";
+
+    
  }
 
 //背景星
  if ((ucyuFlg.getBoundingClientRect().top <= window.innerHeight + -900) 
                                                 && (ucyuFlg !== true)) {
+    //表示
     document.getElementById("hosi0").style.visibility="visible";
     document.getElementById("hosi1").style.visibility="visible";
   } else {
+    //非表示
     document.getElementById("hosi0").style.visibility="hidden";
     document.getElementById("hosi1").style.visibility="hidden";
  }
@@ -153,41 +161,3 @@ function MenuClose(){
   //ハンバーガーメニューを閉じる
   document.getElementById("drawer_input").checked= false;
 }
-
-//星点滅
-/*window.addEventListener('DOMContentLoaded', function(){
-
-  setTimeout(() => {
-    document.getElementById("hosi0").style.filter = "opacity(0.2)";
-    document.getElementById("hosi1").style.filter = "opacity(1)";
-  }, 3000);
-
-  setTimeout(() => {
-    document.getElementById("hosi0").style.filter = "opacity(1)";
-    document.getElementById("hosi1").style.filter = "opacity(0.2)";
-  }, 10000);
-
-  setTimeout(() => {
-    document.getElementById("hosi0").style.filter = "opacity(0.8)";
-    document.getElementById("hosi1").style.filter = "opacity(1)";
-  }, 15000);
-
-
-  setTimeout(() => {
-    document.getElementById("hosi0").style.filter = "opacity(0.2)";
-    document.getElementById("hosi1").style.filter = "opacity(0.8)";
-  }, 12000);
-
-  setTimeout(() => {
-    document.getElementById("hosi0").style.filter = "opacity(1)";
-    document.getElementById("hosi1").style.filter = "opacity(1)";
-  }, 16000);
-
-
-  setTimeout(() => {
-    document.getElementById("hosi0").style.filter = "opacity(0)";
-    document.getElementById("hosi1").style.filter = "opacity(0)";
-  }, 19000);
-
-});
-*/
