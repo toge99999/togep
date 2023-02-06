@@ -903,6 +903,7 @@ a{
     }
     h1{
         font-size: 55px;
+        margin-top: 150px;
     }
     h3{
         font-size: 23px;
@@ -914,8 +915,9 @@ a{
 
     /*タイトル：スマートフォン用-------------------------*/
     .sphelper_cat{
+        position: static;
         display: block;
-        position: absolute;
+        /*position: absolute;*/
         z-index: 500;
     }
 
@@ -935,7 +937,7 @@ a{
     .item_link {
         display:none;/*非表示*/
         z-index: 10000;
-        position: fixed;
+        /*position: fixed;*/
         height: 25px;
         top: 520px;
         padding-top: 30px;
@@ -974,8 +976,9 @@ a{
 
     /*プロフィール：スマートフォン用-------------------------*/
     .cHoby{
+        position: static;
        /* display:none; */
-        position: absolute;
+        /*position: absolute;*/
         top: 800px;
         height: 1800px;
         width: 100%;
@@ -984,15 +987,23 @@ a{
     .prof_img{
         height: 200px;
         width: 200px;
+        margin: 50px 0 0 0;
     }
+
+    .wfont{
+        margin-top: 25px;
+        }
     
     .cHobyBox{
         display: block;
         height: 800px;
         width: 100%;
-        justify-content: center;
+        position: relative;
+        top: 250px;
     }
-
+    .marginset{
+        margin-top: 0;
+    }
     .aHoby_img {
         width: 200px;
         height: 200px;
@@ -1003,7 +1014,6 @@ a{
     .big_cat{
       width: 250px;
       height: 250px;
-      margin-top: 70px;
     }
 
    .cHobyCat {
@@ -1014,11 +1024,12 @@ a{
 
     /*スキル：スマートフォン用-------------------------*/
     .sSkil{
+    position: static;
     /* display:none; */
     top: 2446px;
     height: auto;
     width: 100%;
-    position: absolute;
+    /*position: absolute;*/
     z-index: 500;
     margin-left: -28px;
     }
@@ -1086,6 +1097,7 @@ a{
 
     /*実績：スマートフォン用-------------------------*/
     .sActual{
+        position: static;
        /* display:none; */
         top: 3486px;
     }
@@ -1116,6 +1128,7 @@ a{
 
     /*最後に：スマートフォン用-------------------------*/
     .slast{
+        position: static;
        /* display:none; */
        top: 5362px;
        height: auto;
